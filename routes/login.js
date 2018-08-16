@@ -100,6 +100,7 @@ app.post('/google', async(req, res) => {
                     usuario: usuarioDB,
                     token: token,
                     id: usuarioDB._id
+
                 });
 
             });

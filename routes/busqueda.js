@@ -21,7 +21,7 @@ app.get('/coleccion/:tabla/:busqueda', (req, res) => {
 
     switch (tabla) {
         case "usuarios":
-            promesa = buscarHospitales(busqueda, regex);
+            promesa = buscarUsuarios(busqueda, regex);
             // buscarHospitales(busqueda, regex).then(respuestas => {
             //     res.status(200).json({
             //         usuarios: respuestas

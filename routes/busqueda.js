@@ -116,13 +116,13 @@ function buscarUsuarios(busqueda, regex) {
 
     return new Promise((resolve, reject) => {
 
-        Usuario.find({}, 'nombre email role img')
+        Usuario.find({}, 'nombre email role')
             .or([{ nombre: regex }, { email: regex }])
-            .exec((err, usuarios) => {
+            .exec((err, medicos) => {
                 if (err) {
-                    reject('Error al cargar usuarios', err);
+                    reject('Error al cargar medicos', err);
                 } else {
-                    resolve(usuarios);
+                    resolve(medicos);
                 }
             });
     });
